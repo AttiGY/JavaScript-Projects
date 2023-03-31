@@ -5,8 +5,11 @@
 	</head>
 
     <script>
+        //wait for HTML to be loaded before running jQuery
         $(document).ready(function() {
+            //selects HTML element to append content
             $("html").append(
+                //HTML content
                 "<body>\
                     <div id='container'>\
                         <div id='inner'>\
@@ -18,10 +21,13 @@
                     </div>\
                 </body>"
             );
+            //opening alert window when clicked on paragraph 1
             $( "#1" ).click(function() {
                 window.alert( "You clicked a paragraph!" );
             })
+            //Adding CSS to paragraph 2
             $("#2").css({"color":"red"});
+            //slowly making h1 dissapear when clicked on paragraph 3
             $("#3").click(function() {
                 $("h1").hide("slow");
             });
